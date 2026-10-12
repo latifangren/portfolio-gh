@@ -24,10 +24,13 @@ fully animated cinematic experience built from live GitHub data — no build ste
 
 ## 🛠️ Tech
 
-Single self-contained `index.html` (markup + styles + scripts + inlined assets).
-3D via Three.js CDN, motion via GSAP ScrollTrigger + Lenis. No build step, no
-backend — runs anywhere static files are served, with graceful fallbacks if a
-CDN is unreachable.
+Modular, zero-build static architecture:
+- **Markup**: Clean semantic `index.html` (~18 KB)
+- **Styles**: `css/style.css` (custom design system tokens, typography, dark fantasy aesthetics)
+- **Data Configuration**: `js/data.js` (isolated repository records & lab categories for quick maintenance)
+- **Interactive Controller**: `js/main.js` (GSAP ScrollTrigger + Lenis smooth scroll, Three.js ember field, particle canvases)
+- **Assets**: Optimized WebP visuals in `assets/img/`
+- No build step, no backend required — runs on GitHub Pages or any static host.
 
 ## 🚀 Deploy
 
@@ -43,8 +46,20 @@ The `.nojekyll` file is included so Pages serves assets as-is.
 ## 📁 Structure
 
 ```
-├── index.html   # the entire site (everything inlined)
-├── .nojekyll    # disable Jekyll processing on GitHub Pages
+├── index.html            # Main markup (~18 KB, links CSS, JS, and assets)
+├── css/
+│   └── style.css         # Dark fantasy theme, typography, layout & animations
+├── js/
+│   ├── data.js           # Chronicles & Dragonpit data (easy to update)
+│   └── main.js           # Three.js embers, GSAP, Lenis, tilt, cursor & canvas particles
+├── assets/
+│   └── img/
+│       ├── hero-bg.webp          # 100vh hero castle & dragon
+│       ├── hero-spotlight.webp   # Spotlight reveal texture
+│       ├── ser-whisker.webp      # Knight-cat mascot
+│       ├── dragon-banner.webp    # Dragon banner portrait
+│       └── foot-throne.webp      # Burning throne background
+├── .nojekyll             # Disable Jekyll processing on GitHub Pages
 └── README.md
 ```
 
