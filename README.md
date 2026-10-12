@@ -1,27 +1,33 @@
 # RAEVTAR — Portfolio
 
-Personal cinematic portfolio website. Dark, premium, fully animated single-page experience built from live GitHub data.
+Dark fantasy portfolio website in the spirit of House of the Dragon. A single-file,
+fully animated cinematic experience built from live GitHub data — no build step.
 
 ## ✨ Features
 
-- **Cinematic 100vh hero** — AI-generated night-landscape backdrop with a cursor-following
-  spotlight reveal (260px feathered mask, lerped motion)
-- **Preloader** — 0–100 counter with curtain transition
+- **Epic 100vh hero** — burning castle + dragon backdrop with a WebGL (Three.js)
+  ember particle field, fog and mouse-parallax camera
+- **Knight-cat mascot** — original AI-generated character (*Ser Whisker*) revealed
+  through a cursor-following spotlight (260px feathered mask, lerped motion)
+- **Preloader** — "Forging the realm…" with rising embers
 - **Butter-smooth motion** — Lenis smooth scroll + GSAP ScrollTrigger parallax,
   staggered line reveals, magnetic buttons, custom cursor
-- **Creative Process** — 5-step vertical journey with a scroll-driven glowing path + 3D tilt cards
-- **Selected Works** — 8 real projects from [`@latifangren`](https://github.com/latifangren)
-  in an asymmetric editorial layout with 3D tilt / glow hover
-- **Lab** — interactive playground (Systems / Android / Network / Web) with parallax chips
-- **Atmospheric footer** — glowing particle canvas + oversized CTA
-- Film grain overlay, marquee strips, `prefers-reduced-motion` support, fully responsive
-  with mobile fullscreen menu
+- **The Five Trials** — creative process as a vertical quest with a scroll-driven
+  fire path + 3D tilt cards
+- **Chronicles** — 8 real projects from [`@latifangren`](https://github.com/latifangren)
+  presented as battle records with 3D tilt / ember-glow hover
+- **The Dragonpit** — interactive lab (Systems / Android / Network / Web)
+  with floating ember chips
+- **Burning-throne footer** — fire particle canvas + oversized CTA
+- Cinzel serif display type, film grain + vignette, `prefers-reduced-motion`
+  support, fully responsive with mobile fullscreen menu
 
 ## 🛠️ Tech
 
-Vanilla HTML/CSS/JS — no build step. Animations via GSAP + ScrollTrigger + Lenis (CDN).
-Everything is inlined into a single `index.html`, so the site runs anywhere static files
-are served.
+Single self-contained `index.html` (markup + styles + scripts + inlined assets).
+3D via Three.js CDN, motion via GSAP ScrollTrigger + Lenis. No build step, no
+backend — runs anywhere static files are served, with graceful fallbacks if a
+CDN is unreachable.
 
 ## 🚀 Deploy
 
@@ -37,7 +43,7 @@ The `.nojekyll` file is included so Pages serves assets as-is.
 ## 📁 Structure
 
 ```
-├── index.html   # the entire site (markup + styles + scripts + inlined assets)
+├── index.html   # the entire site (everything inlined)
 ├── .nojekyll    # disable Jekyll processing on GitHub Pages
 └── README.md
 ```
@@ -47,6 +53,7 @@ The `.nojekyll` file is included so Pages serves assets as-is.
 - Project data (names, descriptions, stars, languages) was snapshotted from the
   GitHub API for `latifangren` at build time; re-export to refresh.
 - Contact links point only to verified destinations (GitHub profile, raevtar.tech).
+- All artwork is original AI-generated for this site.
 
 ---
 
